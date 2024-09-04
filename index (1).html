@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payaso con Sombrero de Copa</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+            color: white;
+        }
+        .clown {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .face {
+            width: 200px;
+            height: 200px;
+            background-color: #ffcc99;
+            border-radius: 50%;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .eye {
+            width: 30px;
+            height: 30px;
+            background-color: white;
+            border-radius: 50%;
+            position: absolute;
+            top: 60px;
+        }
+        .eye.left {
+            left: 60px;
+        }
+        .eye.right {
+            right: 60px;
+        }
+        .pupil {
+            width: 10px;
+            height: 10px;
+            background-color: black;
+            border-radius: 50%;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+        .nose {
+            width: 40px;
+            height: 40px;
+            background-color: red;
+            border-radius: 50%;
+            position: absolute;
+            top: 90px;
+        }
+        .mouth {
+            width: 100px;
+            height: 70px;
+            background-color: red;
+            border-radius: 0 0 50px 50px;
+            position: absolute;
+            top: 130px;
+            overflow: hidden;
+        }
+        .mouth::before {
+            content: '';
+            width: 100px;
+            height: 50px;
+            background-color: #ffcc99;
+            position: absolute;
+            top: 20px;
+            left: 0;
+            border-radius: 50%;
+        }
+        .hat {
+            width: 100px;
+            height: 100px;
+            background-color: purple;
+            position: absolute;
+            top: -90px; /* Ajuste de posición para acercar a la cabeza */
+            left: 50px;
+            border-radius: 10px 10px 0 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .hat-band {
+            width: 100px;
+            height: 20px;
+            background-color: black;
+            position: absolute;
+            top: 70px;
+            border-radius: 5px;
+        }
+        .hat::before {
+            content: '';
+            width: 140px;
+            height: 20px;
+            background-color: purple;
+            position: absolute;
+            top: 100px;
+            left: -20px;
+            border-radius: 10px;
+        }
+        .hat-text {
+            position: absolute;
+            top: -50px;
+            font-size: 12px;
+            color: white;
+            text-align: center;
+            width: 200px;
+        }
+        .bow {
+            width: 80px;
+            height: 40px;
+            background-color: green;
+            position: absolute;
+            top: 180px;
+            border-radius: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .bow::before, .bow::after {
+            content: '';
+            width: 40px;
+            height: 40px;
+            background-color: green;
+            border-radius: 50%;
+            position: absolute;
+            top: 0;
+        }
+        .bow::before {
+            left: -30px;
+        }
+        .bow::after {
+            right: -30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="clown">
+        <div class="hat">
+            <div class="hat-band"></div>
+        </div>
+        <div class="hat-text">Realizado por: Daniel Caceres</div>
+        <div class="face">
+            <div class="eye left">
+                <div class="pupil"></div>
+            </div>
+            <div class="eye right">
+                <div class="pupil"></div>
+            </div>
+            <div class="nose"></div>
+            <div class="mouth"></div>
+        </div>
+        <div class="bow"></div>
+    </div>
+</body>
+</html>
